@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <style>
+    
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+color: aliceblue;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(0,0,0,0.8);
+
+  
+  border-radius: 0 3px 3px 0;
+  
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 20%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 20%;
+  border-radius: 3px 0 0 3px;
+}
+
+    </style>
+</head>
+<body bgcolor="black"><center>
+    <br><br><br><br><br><br><br><br><br><br>
+        
+        
+        
+            <img id="i1" src="https://cdn.images.express.co.uk/img/dynamic/20/590x/secondary/Game-of-Thrones-season-8-1634064.jpg?r=1555321837869" style="width:60%; height: 60%;" >
+            
+     
+        
+       
+        <input  class="prev" type="button" value="&#10094" onclick="prev()">
+        <input class="next" type="button" value="&#10095" onclick="next()"> 
+    
+    <script>
+        var index=0;
+    var slider=["https://cdn.images.express.co.uk/img/dynamic/20/590x/secondary/Game-of-Thrones-season-8-1634064.jpg?r=1555321837869",
+    "http://hdqwalls.com/wallpapers/tyrion-lannister-game-of-thrones-season-8-poster-t4.jpg",
+    "https://cdn.inquisitr.com/wp-content/uploads/2019/04/HBOs-Game-of-Thrones-Season-8-poster-Cersei-Lannister-iron-throne.jpg",
+    "https://boygeniusreport.files.wordpress.com/2019/03/4eqhrbv42qea478inkjnbvcx-cropped.jpg?quality=98&strip=all",
+    "https://cdn3.tvweb.com/i/article/xD81IN9bOoIdCtHUlDtLLvjLM7634u/798:50/Game-Of-Thrones-Season-8-Character-Posters.jpg",
+    "http://hdqwalls.com/wallpapers/daenerys-targaryen-game-of-thrones-season-8-poster-9e.jpg",
+    "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gt8-key-fb-9x16-sansa-1551376706.jpg?crop=1.00xw:0.566xh;0,0&resize=640:*",
+    "https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2019/02/game_of_thrones_season_8_posters_revealed_night_king.jpg?itok=3lmKWO8L" ,
+    "http://hdqwalls.com/wallpapers/arya-stark-game-of-thrones-season-8-poster-bv.jpg"
+    ];
+function prev(){
+index= (index+9-1)%9;
+document.getElementById("i1").setAttribute("src",slider[index])
+}
+function next(){
+index= (index+1)%9;
+document.getElementById("i1").setAttribute("src",slider[index])
+}
+
+    
+    
+    </script>
+</center>
+</body>
+</html>
